@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Järvikylän Kartano</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="background">
+            <h1>Otsikko tähän</h1>
+            <img src="Kuvat/GFvaakunaMV.png" alt="Minilogo" class="logo">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="maatalous.html">Maatalous</a></li>
+                <li><a href="metsatalous.html">Metsätalous</a></li>
+                <li><a href="palvelumme.html">Palvelumme</a></li>
+                <li><a href="siirtonurmi.html">Siirtonurmi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+      <div>
+        <img src="Kuvat/GFvaakunaMV.png" alt="grotenfelt vaakuna" width="100px" height="100px">
+      </div>
+        <section class="info">
+
+            <a href="historia.html">
+            <div class="box" id="historia">
+                <img src="Kuvat/jarvikyla_kartano-netti.jpg" alt="Historia">
+                <p>Historia</p>
+                <figcaption>Lyhyt kuvaus historiasta tähän.</figcaption>
+            </div>
+            </a>
+
+            <a href="maatalous.html">
+            <div class="box" id="maatalous">
+                <img src="Kuvat/rye-5452454_640.jpg" alt="Maatalous">
+                <p>Maatalous</p>
+                <figcaption>Lyhyt kuvaus maataloudesta tähän.</figcaption>
+            </div>
+            </a>
+
+            <a href="metsatalous.html">
+             <div class="box" id="metsatalous">
+                <img src="Kuvat/IMG_3846.JPG" alt="Metsätalous">
+                <p>Metsätalous</p>
+                <figcaption>Lyhyt kuvaus metsätaloudesta tähän.</figcaption>    
+             </div>
+            </a>
+
+            <a href="metsatalous.html">
+            <div class="box" id="palvelumme">
+                <img src="Kuvat/tractor-7011767_640.png" alt="Palvelumme">
+                <p>Palvelumme</p>
+                <figcaption>Lyhyt kuvaus palveluista tähän.</figcaption>
+            </div>
+            </a>
+
+            <a href="siirtonurmi.html">
+            <div class="box" id="siirtonurmi">
+              <img src="Kuvat/nurmirulla.jpg" alt="Siirtonurmi">
+              <p>Siirtonurmi</p>
+              <figcaption>Lyhyt kuvaus siirtonurmesta tähän.</figcaption>
+          </div>
+          </a>
+
+        </section>
+
+        <section class="contact">
+            <button onclick="showContactForm()">Ota yhteyttä</button>
+        </section>
+        
+        <section class="contact-form" id="contactForm" style="display:none;">
+          <form action="yhteydenotto.php" method="post">
+              <label for="name">Nimi:</label>
+              <input type="text" id="name" name="name" required><br><br>
+              
+              <label for="email">Sähköposti:</label>
+              <input type="email" id="email" name="email" required><br><br>
+              
+              <label for="message">Viesti:</label><br>
+              <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+              
+              <button type="submit">Lähetä</button>
+          </form>
+          <button onclick="hideContactForm()">Peruuta</button>
+      </section>
+    </main>
+    <footer>
+        <p>Järvikylän Kartano | Kartanotie 6, 79600 Joroinen</p>
+        <p>© 2025</p> 
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #807868;
+}
+
+.background {
+  background: url('Kuvat/ai-generated-8986912_1280.jpg') no-repeat center center/cover;
+  padding: 50px;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 10px;
+  background-color: #9c937f;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+}
+
+.contact {
+  margin: 20px;
+}
+
+.button {
+  padding: 5px px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.footer {
+  background: #9c937f;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  text-align: center;
+}
+
+
+#contactForm {
+    display: none;
+}
+
+</style>
+
+
+
+
+
