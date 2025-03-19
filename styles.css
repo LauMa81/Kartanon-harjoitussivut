@@ -12,14 +12,18 @@ body {
   position: relative;
 }
 
-.yläpalkki_maatalous {
+.yläpalkki_maatalous,
+.yläpalkki_metsätalous,
+.yläpalkki_historia {
   position: relative;
   width: 100%;
   height: 400px; /* Voit säätää korkeutta tarpeen mukaan */
   overflow: hidden;
 }
 
-.yläpalkki_maatalous h1 {
+.yläpalkki_maatalous h1,
+.yläpalkki_metsätalous h1,
+.yläpalkki_historia h1 {
   position: relative;
   z-index: 2;
   color: white; /* Voit säätää tekstin väriä tarpeen mukaan */
@@ -27,22 +31,9 @@ body {
   line-height: 200px; /* Varmistaa, että teksti on keskitetty pystysuunnassa */
 }
 
-.yläpalkki_metsätalous {
-  position: relative;
-  width: 100%;
-  height: 400px; /* Voit säätää korkeutta tarpeen mukaan */
-  overflow: hidden;
-}
-
-.yläpalkki_metsätalous h1 {
-  position: relative;
-  z-index: 2;
-  color: white; /* Voit säätää tekstin väriä tarpeen mukaan */
-  text-align: center;
-  line-height: 200px; /* Varmistaa, että teksti on keskitetty pystysuunnassa */
-}
-
-.background-video-maatalous {
+.background-video-maatalous,
+.background-video-metsätalous,
+.background-video-historia {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -51,19 +42,14 @@ body {
   object-fit: cover;
   object-position: center;
   transform: translate(-50%, -50%);
-  z-index: -1;  
+  z-index: -1;
 }
 
-.background-video-metsätalous {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transform: translate(-50%, -50%);
-  z-index: -1;  
+.vaakuna {
+  justify-content: center;
+  margin: 20px 0;
+  width: 100px;
+  height: 100px;
 }
 
 .logo {
@@ -90,6 +76,49 @@ nav ul li a {
   text-decoration: none;
 }
 
+main {
+  padding: 20px;
+  background-color: #f4f4f4;
+  text-align: left;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #8a9287;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.content h2 {
+  text-align: center;
+  color: #333;
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.content ul li {
+  background: #e7e7e7;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.content ul li strong {
+  color: #333;
+}
+
 .info {
   display: flex;
   justify-content: center;
@@ -97,85 +126,21 @@ nav ul li a {
   margin: 20px;
 }
 
-.box img {
-  width: 100%;
-  height: auto;
-}
-
-.contact {
-  margin: 20px;
-}
-
-button {
-  padding: 5px 10px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.alapalkki {
-  background: #9c937f;
-  color: rgb(14, 13, 13);
-  padding: 10px;
-  margin-top: 20px;
-}
-
-/* Yhteinen tyyli kaikille painikkeille */
-button {
-  padding: 12px 24px; /* Varmistaa, että painikkeella on riittävästi tilaa */
-  font-size: 16px; /* Määrittää fonttikoon */
-  border-radius: 5px; /* Pyöristää painikkeen kulmat */
-  cursor: pointer; /* Muuttaa kursoria, kun käyttäjä vie hiiren painikkeen päälle */
-  border: 2px solid #333; /* Määrittää painikkeen reunan värin */
-  background-color: #c9c1b1; /* Väri painikkeen taustalle (esim. vihreä) */
-  color: #333; /* Väri painikkeen tekstille */
-  transition: background-color 0.3s; /* Lisää pehmeän siirtymisen väreille */
-}
-
-#contactForm form {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-#contactForm input, #contactForm textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-#contactForm button:hover {
-  background-color: #45a049; /* Tummempi vihreä väri hover-tilassa */
-}
-
-/* Asennetaan "info"-säiliö keskitetysti */
-.info {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; /* Tämä varmistaa, että laatikot menevät seuraavalle riville tarpeen mukaan */
-  gap: 20px; /* Väli laatikoiden välillä */
-  margin-top: 20px;
-}
-
-/* Yksittäinen laatikko */
 .box {
-  width: 250px; /* Voit säätää tämän koon tarpeen mukaan */
+  width: 150px; /* Voit säätää tämän koon tarpeen mukaan */
   text-align: center; /* Keskittää tekstin */
   background-color: #9c937f; /* Taustaväri laatikolle */
   border: 1px solid #ccc; /* Kehys laatikolle */
   border-radius: 10px; /* Pyöristää kulmat */
-  padding: 10px; /* Tilaa laatikon sisällä */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lisää varjo */
-
-  display: flex;           /* Käytämme Flexboxia */
-  flex-direction: column;  /* Järjestetään lapset pystysuoraan */
-  justify-content: space-between;  /* Työntää lapset reunoille */
-  height: 300px; 
+  padding: 20px; /* Tilaa laatikon sisällä */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Lisää varjo */
+  display: flex; /* Käytämme Flexboxia */
+  flex-direction: column; /* Järjestetään lapset pystysuoraan */
+  justify-content: space-between; /* Työntää lapset reunoille */
+  height: 200px;
+  margin: 20px;
 }
 
-/* Kuvan muotoilu laatikossa */
 .box img {
   width: 100%; /* Kuvan leveys täyttää laatikon */
   height: auto; /* Pitää kuvan mittasuhteet */
@@ -183,55 +148,11 @@ button {
   margin-bottom: 10px; /* Lisää väli kuvan ja tekstin väliin */
 }
 
-/* Tekstin muotoilu */
 .box p {
   font-size: 16px;
   color: #333; /* Tummanharmaa väri tekstille */
   margin-top: auto;
   line-height: 1.5; /* Lisää riviväli, jotta teksti ei ole liian tiivistä */
-}
-
-/* Yksittäinen laatikko */
-.box {
-  width: 250px; 
-  text-align: center; 
-  background-color: #9c937f;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Kuvan muotoilu laatikossa */
-.box img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-/* Alkuperäinen teksti */
-.short-text {
-  display: inline;
-}
-
-/* Piilotettu teksti, joka tulee näkyviin */
-.full-text {
-  display: none;
-}
-
-/* Tekstin ja buttonin väli */
-button {
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
 }
 
 figcaption {
@@ -249,7 +170,40 @@ a {
   color: inherit; /* Säilyttää tekstin alkuperäisen värin */
 }
 
-.box {
-  text-decoration: none;
-  color: inherit;
+button {
+  padding: 12px 24px; /* Varmistaa, että painikkeella on riittävästi tilaa */
+  font-size: 16px; /* Määrittää fonttikoon */
+  border-radius: 5px; /* Pyöristää painikkeen kulmat */
+  cursor: pointer; /* Muuttaa kursoria, kun käyttäjä vie hiiren painikkeen päälle */
+  border: 2px solid #333; /* Määrittää painikkeen reunan värin */
+  background-color: #c9c1b1; /* Väri painikkeen taustalle (esim. vihreä) */
+  color: #333; /* Väri painikkeen tekstille */
+  transition: background-color 0.3s; /* Lisää pehmeän siirtymisen väreille */
+}
+
+button:hover {
+  background-color: #45a049; /* Tummempi vihreä väri hover-tilassa */
+}
+
+#contactForm form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#contactForm input, #contactForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.alapalkki {
+  background: #9c937f;
+  color: rgb(14, 13, 13);
+  padding: 10px;
+  margin-top: 20px;
+  text-align: center;
 }
