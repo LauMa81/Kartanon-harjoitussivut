@@ -141,6 +141,11 @@ main {
   margin: 20px;
 }
 
+.box:hover {
+  transform: translateY(-10px); /* Nostaa laatikkoa hieman */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Lisää syvempi varjo */
+}
+
 .box img {
   width: 100%; /* Kuvan leveys täyttää laatikon */
   height: auto; /* Pitää kuvan mittasuhteet */
