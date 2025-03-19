@@ -76,6 +76,9 @@ nav ul li a {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
   background-color: #afa69c;
   text-align: center;
@@ -123,7 +126,7 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 20px;
+  gap: 5px; /* Lisää tilaa boxien väliin */
 }
 
 .box {
@@ -138,7 +141,7 @@ main {
   flex-direction: column; /* Järjestetään lapset pystysuoraan */
   justify-content: space-between; /* Työntää lapset reunoille */
   height: 200px;
-  margin: 20px;
+  margin: 10px;
 }
 
 .box:hover {
@@ -244,12 +247,12 @@ button:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.intro h2, .news h2, .testimonials h2, .map h2, .contact-form h2 {
+.intro h2, .news h2, .map h2 {
   text-align: center;
   color: #333;
 }
 
-.intro p, .news p, .testimonials p, .map p, .contact-form p {
+.intro p, .news p, .map p {
   font-size: 18px;
   line-height: 1.6;
   color: #666;
@@ -272,13 +275,21 @@ button:hover {
 }
 
 /* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .box {
+    flex: 1 1 calc(50% - 40px); /* Kaksi laatikkoa rinnakkain */
+    max-width: calc(50% - 40px); /* Kaksi laatikkoa rinnakkain */
+  }
+}
+
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
   }
 
   .box {
-    width: 100%;
+    flex: 1 1 100%; /* Yksi laatikko per rivi */
+    max-width: 100%; /* Yksi laatikko per rivi */
   }
 
   .map iframe {
