@@ -3,9 +3,10 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+  background-color: #807868;
 }
 
-.background {
+.yläpalkki {
   background: url('Kuvat/ai-generated-8986912_1280.jpg') no-repeat center center/cover;
   padding: 50px;
   position: relative;
@@ -23,7 +24,7 @@ nav ul {
   justify-content: center;
   list-style: none;
   padding: 10px;
-  background-color: #333;
+  background-color: #9c937f;
 }
 
 nav ul li {
@@ -57,7 +58,7 @@ button {
   cursor: pointer;
 }
 
-footer {
+.alapalkki {
   background: #9c937f;
   color: white;
   padding: 10px;
