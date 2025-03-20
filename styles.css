@@ -10,6 +10,7 @@ body {
   background: url('Kuvat/ai-generated-8986912_1280.jpg') no-repeat center center/cover;
   padding: 50px;
   position: relative;
+  filter: grayscale(505) sepia(50%);
 }
 
 .yläpalkki_maatalous,
@@ -126,21 +127,22 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 5px; /* Lisää tilaa boxien väliin */
+  gap: 1px; /* Lisää tilaa boxien väliin */
+  margin: 20px 0;
 }
 
 .box {
-  width: 150px; /* Voit säätää tämän koon tarpeen mukaan */
+  width: 200px; /* Voit säätää tämän koon tarpeen mukaan */
   text-align: center; /* Keskittää tekstin */
   background-color: #9c937f; /* Taustaväri laatikolle */
   border: 1px solid #ccc; /* Kehys laatikolle */
   border-radius: 10px; /* Pyöristää kulmat */
-  padding: 20px; /* Tilaa laatikon sisällä */
+  padding: 10px; /* Tilaa laatikon sisällä */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Lisää varjo */
   display: flex; /* Käytämme Flexboxia */
   flex-direction: column; /* Järjestetään lapset pystysuoraan */
   justify-content: space-between; /* Työntää lapset reunoille */
-  height: 200px;
+  height: 250px;
   margin: 10px;
 }
 
@@ -151,21 +153,24 @@ main {
 
 .box img {
   width: 100%; /* Kuvan leveys täyttää laatikon */
-  height: auto; /* Pitää kuvan mittasuhteet */
+  height: 100%; /* Pitää kuvan mittasuhteet */
+  object-fit: cover; /* Skaalaa kuvan täyttämään laatikon säilyttäen mittasuhteet */
   border-radius: 5px; /* Pyöristää kuvan kulmat */
   margin-bottom: 10px; /* Lisää väli kuvan ja tekstin väliin */
 }
 
 .box p {
+  text-align: center;
   font-size: 16px;
   color: #333; /* Tummanharmaa väri tekstille */
   margin-top: auto;
-  line-height: 1.5; /* Lisää riviväli, jotta teksti ei ole liian tiivistä */
+  line-height: 1.0; /* Lisää riviväli, jotta teksti ei ole liian tiivistä */
 }
 
 figcaption {
   font-size: 12px;
   color: #555454;
+  margin-top: auto;
 }
 
 .box a {
@@ -238,11 +243,11 @@ button:hover {
   margin: 5px 0;
 }
 
-.intro, .news, .testimonials, .map, .contact-form {
-  max-width: 800px;
+.intro, .news, .map {
+  max-width: 100%;
   margin: 20px auto;
   padding: 20px;
-  background-color: white;
+  background-color: #e9e7e3;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -272,6 +277,30 @@ button:hover {
 
 .news ul li strong {
   color: #333;
+}
+
+.newsbody {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #807868;
+}
+
+.news-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Lisää tilaa news-osioiden väliin */
+  flex-wrap: wrap; /* Varmistaa, että osiot pinoutuvat pienemmillä näytöillä */
+}
+
+.news {
+  flex: 1 1 45%; /* Varmistaa, että molemmat laatikot ovat samankokoisia */
+  min-height: 300px; /* Asettaa minimikorkeuden laatikoille */
+  background-color: #e9e7e3;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
 /* Media queries for responsiveness */
