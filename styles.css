@@ -10,7 +10,7 @@ body {
   background: url('Kuvat/ai-generated-8986912_1280.jpg') no-repeat center center/cover;
   padding: 50px;
   position: relative;
-  filter: grayscale(505) sepia(50%);
+  filter: grayscale(50%) sepia(50%);
 }
 
 .yläpalkki_maatalous,
@@ -57,14 +57,14 @@ body {
   margin: 20px 0;
   width: 100px;
   height: 100px;
-}
+} /* Vaakunan värisävyt: #afab9f (harmaa), #836a3e (vaaleampi ruskea), #415263 (siniharmaa), #4d3016 (ruskea), #141116 (melkein musta) */
 
 nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
   padding: 10px;
-  background-color: #9c937f;
+  background-color: #415263;
 }
 
 nav ul li {
@@ -199,7 +199,7 @@ button:hover {
 }
 
 .alapalkki {
-  background: #9c937f;
+  background: #415263;
   color: rgb(14, 13, 13);
   padding: 10px;
   margin-top: 20px;
