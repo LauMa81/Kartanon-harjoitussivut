@@ -59,6 +59,21 @@ body {
   z-index: -1;
 }
 
+.historia_tausta {
+  background: url('Kuvat/kartanon_sali.jpg') no-repeat left center/cover;
+  position: relative;
+}
+
+.historia_tausta::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+}
+
 .vaakuna {
   justify-content: center;
   margin: 20px 0;
@@ -70,9 +85,10 @@ nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  padding: 10px;
+  padding: 20px;
   background-color: #415263;
 }
+
 
 nav ul li {
   margin: 0 15px;
@@ -315,6 +331,10 @@ a {
 
   .map iframe {
     height: 200px;
+  }
+
+  nav ul li {
+    margin: 10px 0; /* Lisää tilaa elementtien väliin pystysuunnassa */
   }
 }
 
