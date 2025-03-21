@@ -4,6 +4,13 @@ body {
   padding: 0;
   text-align: center;
   background-color: #807868;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
 }
 
 .yläpalkki_etusivu {
@@ -77,6 +84,7 @@ nav ul li a {
 }
 
 main {
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,6 +92,7 @@ main {
   background-color: #afa69c;
   text-align: center;
   font-size: 14px;
+  margin: 0 auto;
 }
 
 .content {
@@ -98,13 +107,13 @@ main {
 
 .content h2 {
   text-align: center;
-  color: #333;
+  color: #0f0f0f;
 }
 
 .content p {
   font-size: 14px;
   line-height: 1.6;
-  color: #131212;
+  color: #111111;
 }
 
 .content ul {
@@ -169,33 +178,22 @@ main {
 
 figcaption {
   font-size: 12px;
-  color: #555454;
+  color: #333;
   margin-top: auto;
 }
 
 .box a {
   text-decoration: none;
   color: inherit;
+  display: block; /* Asetetaan linkki block-tasoiseksi */
+  width: 100%; /* Asetetaan linkin leveys täyttämään laatikko */
+  height: 100%; /* Asetetaan linkin korkeus täyttämään laatikko */
+  
 }
 
 a {
   text-decoration: none; /* Poistaa alleviivauksen */
   color: inherit; /* Säilyttää tekstin alkuperäisen värin */
-}
-
-button {
-  padding: 12px 24px; /* Varmistaa, että painikkeella on riittävästi tilaa */
-  font-size: 16px; /* Määrittää fonttikoon */
-  border-radius: 5px; /* Pyöristää painikkeen kulmat */
-  cursor: pointer; /* Muuttaa kursoria, kun käyttäjä vie hiiren painikkeen päälle */
-  border: 2px solid #333; /* Määrittää painikkeen reunan värin */
-  background-color: #c9c1b1; /* Väri painikkeen taustalle (esim. vihreä) */
-  color: #333; /* Väri painikkeen tekstille */
-  transition: background-color 0.3s; /* Lisää pehmeän siirtymisen väreille */
-}
-
-button:hover {
-  background-color: #45a049; /* Tummempi vihreä väri hover-tilassa */
 }
 
 .alapalkki {
@@ -295,7 +293,7 @@ button:hover {
 }
 
 .news {
-  flex: 1 1 45%; /* Varmistaa, että molemmat laatikot ovat samankokoisia */
+  flex: 1 1; /* Varmistaa, että molemmat laatikot ovat samankokoisia */
   min-height: 300px; /* Asettaa minimikorkeuden laatikoille */
   background-color: #e9e7e3;
   border-radius: 8px;
@@ -304,12 +302,6 @@ button:hover {
 }
 
 /* Media queries for responsiveness */
-@media (max-width: 1024px) {
-  .box {
-    flex: 1 1 calc(50% - 40px); /* Kaksi laatikkoa rinnakkain */
-    max-width: calc(50% - 40px); /* Kaksi laatikkoa rinnakkain */
-  }
-}
 
 @media (max-width: 768px) {
   nav ul {
@@ -325,3 +317,4 @@ button:hover {
     height: 200px;
   }
 }
+
