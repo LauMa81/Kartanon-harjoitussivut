@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: #807868;
+  background-color: #ccc6bb;
   font-size: 16px;
 }
 
@@ -17,12 +17,26 @@ body {
   background: url('Kuvat/ai-generated-8986912_1280.jpg') no-repeat center center/cover;
   padding: 50px;
   position: relative;
-  filter: grayscale(50%) sepia(50%);
+}
+
+yläpalkki_yhteystiedot {
+  background: url('Kuvat/kartano_taide.png') no-repeat center center/cover;
+  position: relative;
+  width: 100%;
+  height: 400px; /* Voit säätää korkeutta tarpeen mukaan */
+  overflow: hidden;
+}
+
+.yläpalkki_historia {
+  background: url('Kuvat/kartano.png') no-repeat center center/cover;
+  position: relative;
+  width: 100%;
+  height: 400px; /* Voit säätää korkeutta tarpeen mukaan */
+  overflow: hidden;
 }
 
 .yläpalkki_maatalous,
 .yläpalkki_metsätalous,
-.yläpalkki_historia,
 .yläpalkki_yhteystiedot,
 .yläpalkki_palvelumme,
 .yläpalkki_siirtonurmi {
@@ -46,8 +60,8 @@ body {
 }
 
 .background-video-maatalous,
-.background-video-metsätalous,
-.background-video-historia {
+.background-video-metsätalous
+ {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -59,27 +73,25 @@ body {
   z-index: -1;
 }
 
-.historia_tausta {
-  background: url('Kuvat/kartanon_sali.jpg') no-repeat left center/cover;
-  position: relative;
-}
-
-.historia_tausta::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
-}
-
 .vaakuna {
   justify-content: center;
   margin: 20px 0;
   width: 100px;
   height: 100px;
 } /* Vaakunan värisävyt: #afab9f (harmaa), #836a3e (vaaleampi ruskea), #415263 (siniharmaa), #4d3016 (ruskea), #141116 (melkein musta) */
+
+.historia_kuvat {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Lisää tilaa kuvien väliin */
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.sali, .vanha_kartano {
+  width: 400px;
+  height: auto;
+  padding: 10px
+}
 
 nav ul {
   display: flex;
@@ -88,7 +100,6 @@ nav ul {
   padding: 20px;
   background-color: #415263;
 }
-
 
 nav ul li {
   margin: 0 15px;
@@ -108,7 +119,7 @@ main {
   background-color: #afa69c;
   text-align: center;
   font-size: 14px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .content {
@@ -257,7 +268,16 @@ a {
   margin: 5px 0;
 }
 
-.intro, .news, .map {
+.intro, .news {
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #e9e7e3;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.);
+}
+
+.map {
   max-width: 100%;
   margin: 20px auto;
   padding: 20px;
@@ -317,6 +337,72 @@ a {
   padding: 20px;
 }
 
+.gallery {
+  width: 100%;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery-item {
+  background-color: #e9e7e3;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/*Painikkeeet*/
+
+.historia-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.historia-button {
+  background-color: #415263;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.historia-button:hover {
+  background-color: #333;
+}
+
+
+.gallery-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.gallery-button {
+  background-color: #415263;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.gallery-button:hover {
+  background-color: #333;
+}
+
 /* Media queries for responsiveness */
 
 @media (max-width: 768px) {
@@ -336,5 +422,12 @@ a {
   nav ul li {
     margin: 10px 0; /* Lisää tilaa elementtien väliin pystysuunnassa */
   }
+
+  .contact-card {
+    width: 100%; /* Yksi kortti per rivi */
+  }
+
 }
+
+
 
