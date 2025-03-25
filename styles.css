@@ -84,14 +84,15 @@ yläpalkki_yhteystiedot {
 .historia_kuvat {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Lisää tilaa kuvien väliin */
+  gap: 25px; /* Lisää tilaa kuvien väliin */
   margin-top: 10px;
   flex-wrap: wrap;
 }
 .sali, .vanha_kartano {
-  width: 400px;
+  width: 350px;
   height: auto;
-  padding: 10px
+  padding: 0;
+  border-radius: 8px;
 }
 
 nav ul {
@@ -157,14 +158,14 @@ main {
 }
 
 .content ul li strong {
-  color: #333;
+  color: #2b2b2b;
 }
 
 .info {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1px; /* Lisää tilaa boxien väliin */
+  gap: 25px; /* Lisää tilaa boxien väliin */
   margin: 20px 0;
 }
 
@@ -178,9 +179,9 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Lisää varjo */
   display: flex; /* Käytämme Flexboxia */
   flex-direction: column; /* Järjestetään lapset pystysuoraan */
-  justify-content: space-between; /* Työntää lapset reunoille */
+  justify-content: center; /* Työntää lapset reunoille */
+  align-items: center;
   height: 250px;
-  margin: 10px;
 }
 
 .box:hover {
@@ -189,11 +190,11 @@ main {
 }
 
 .box img {
-  width: 100%; /* Kuvan leveys täyttää laatikon */
-  height: 100%; /* Pitää kuvan mittasuhteet */
+  width: 150px; /* Kuvan leveys täyttää laatikon */
+  height: 150px; /* Pitää kuvan mittasuhteet */
   object-fit: cover; /* Skaalaa kuvan täyttämään laatikon säilyttäen mittasuhteet */
   border-radius: 5px; /* Pyöristää kuvan kulmat */
-  margin-bottom: 10px; /* Lisää väli kuvan ja tekstin väliin */
+  margin-bottom: 5px; /* Lisää väli kuvan ja tekstin väliin */
 }
 
 .box p {
@@ -208,14 +209,16 @@ figcaption {
   font-size: 12px;
   color: #333;
   margin-top: auto;
+  background-color: #afa69c;
 }
 
 .box a {
   text-decoration: none;
   color: inherit;
   display: block; /* Asetetaan linkki block-tasoiseksi */
-  width: 100%; /* Asetetaan linkin leveys täyttämään laatikko */
-  height: 100%; /* Asetetaan linkin korkeus täyttämään laatikko */
+  width: 90%; /* Asetetaan linkin leveys täyttämään laatikko */
+  height: 90%; /* Asetetaan linkin korkeus täyttämään laatikko */
+  
   
 }
 
