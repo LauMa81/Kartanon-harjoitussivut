@@ -13,51 +13,23 @@ body {
   }
 }
 
-.yläpalkki_etusivu {
-  background: url('Kuvat/ai-generated-8986912_1280.jpg') no-repeat center center/cover;
-  padding: 50px;
-  position: relative;
-}
-
-/* ei käytössä*/
-yläpalkki_yhteystiedot {
-  background: url('Kuvat/kartano_taide.png') no-repeat center center/cover;
+.yläpalkki {
   position: relative;
   width: 100%;
   height: 400px; /* Voit säätää korkeutta tarpeen mukaan */
   overflow: hidden;
 }
 
-.yläpalkki_historia {
-  background: url('Kuvat/kartano.png') no-repeat center center/cover;
-  position: relative;
-  width: 100%;
-  height: 400px; /* Voit säätää korkeutta tarpeen mukaan */
-  overflow: hidden;
-}
-
-.yläpalkki_maatalous,
-.yläpalkki_metsätalous,
-.yläpalkki_yhteystiedot,
-.yläpalkki_palvelumme,
-.yläpalkki_siirtonurmi {
-  position: relative;
-  width: 100%;
-  height: 400px; /* Voit säätää korkeutta tarpeen mukaan */
-  overflow: hidden;
-}
-
-.yläpalkki_maatalous h1,
-.yläpalkki_metsätalous h1,
-.yläpalkki_historia h1,
-.yläpalkki_yhteystiedot h1,
-.yläpalkki_palvelumme h1,
-.yläpalkki_siirtonurmi h1 {
+.yläpalkki h1 {
   position: relative;
   z-index: 2;
   color: white; /* Voit säätää tekstin väriä tarpeen mukaan */
   text-align: center;
   line-height: 200px; /* Varmistaa, että teksti on keskitetty pystysuunnassa */
+}
+
+#historia {
+  background: url('Kuvat/kartano.png') no-repeat center center/cover;
 }
 
 .background-video-maatalous,
