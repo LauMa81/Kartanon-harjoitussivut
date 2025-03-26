@@ -368,8 +368,7 @@ a {
 .historia-button-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  
+  margin-top: 20px 20px;
 }
 
 .historia-button {
@@ -381,6 +380,8 @@ a {
   font-size: 18px;
   transition: background-color 0.3s;
   border: 1px solid #ccc; /* Kehys laatikolle */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Lisää varjo */
+  margin: auto;
 }
 
 .historia-button:hover {
@@ -403,6 +404,7 @@ a {
   font-size: 18px;
   transition: background-color 0.3s;
   border: 1px solid #ccc; /* Kehys laatikolle */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Lisää varjo */
 }
 
 .gallery-button:hover {
