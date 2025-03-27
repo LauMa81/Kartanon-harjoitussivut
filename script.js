@@ -23,4 +23,5 @@ function toggleText(button) {
       fullText.style.display = "none"; // Piilottaa koko tekstin
       button.textContent = "Lue lisää"; // Muuttaa nappia takaisin
   }
+
 }
