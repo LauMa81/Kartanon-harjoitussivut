@@ -26,6 +26,12 @@
 
   <main>
     <style>
+
+      html, body {
+  margin: 0;
+  height: 100%;
+      }
+
       body {
   position: relative; /* Tarvitaan, jotta sisältö pysyy taustakuvan päällä */
   z-index: 1; /* Nostaa sisällön taustakuvan yläpuolelle */
@@ -33,7 +39,7 @@
 
 body::before {
   content: ''; /* Luo pseudo-elementin taustakuvaa varten */
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -80,5 +86,6 @@ body::before {
     <p>Yritys x | Osoite </p> 
     <p>&copy; 2025. Kaikki oikeudet pidätetään.</p>
   </footer>
+
 </body>
 </html>
