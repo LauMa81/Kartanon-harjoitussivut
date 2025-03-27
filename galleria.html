@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
   <header>
     <h1>Kartanon Galleria</h1>
     <nav>
@@ -22,12 +23,32 @@
       </ul>
     </nav>
   </header>
+
   <main>
+    <style>
+      body {
+  position: relative; /* Tarvitaan, jotta sisältö pysyy taustakuvan päällä */
+  z-index: 1; /* Nostaa sisällön taustakuvan yläpuolelle */
+}
+
+body::before {
+  content: ''; /* Luo pseudo-elementin taustakuvaa varten */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('Kuvat/kartano.png') no-repeat center center/cover; /* Taustakuva */
+  z-index: -1; /* Asettaa taustakuvan sisällön taakse */
+  opacity: 0.8; /* Halutessasi voit lisätä läpinäkyvyyttä */
+}
+    </style>
+
     <section class="gallery">
       <h2>Galleria</h2>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="kuva1.jpg" alt="Kuva 1">
+          <img src="Kuvat/vanha_kartano.jpg" alt="Kuva 1">
           <p>Kuvaus 1</p>
         </div>
         <div class="gallery-item">
@@ -38,11 +59,25 @@
           <img src="kuva3.jpg" alt="Kuva 3">
           <p>Kuvaus 3</p>
         </div>
+        <div class="gallery-item">
+          <img src="kuva4.jpg" alt="Kuva 4">
+          <p>Kuvaus 4</p>
+        </div>
+        <div class="gallery-item">
+          <img src="kuva5.jpg" alt="Kuva 5">
+          <p>Kuvaus 5</p>
+        </div>
+        <div class="gallery-item">
+          <img src="kuva6.jpg" alt="Kuva 6">
+          <p>Kuvaus 6</p>
+        </div>
         <!-- Lisää kuvia tarpeen mukaan -->
       </div>
     </section>
   </main>
-  <footer>
+
+  <footer class="alapalkki">
+    <p>Yritys x | Osoite </p> 
     <p>&copy; 2025. Kaikki oikeudet pidätetään.</p>
   </footer>
 </body>

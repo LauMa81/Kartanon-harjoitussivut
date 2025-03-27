@@ -2,77 +2,147 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
 
-body {
-  margin: 0;
-  font-family: Arial;
-  font-size: 17px;
-}
-
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-}
-
-.content {
-  position: fixed;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 100%;
-  padding: 20px;
-}
-
-#myBtn {
-  width: 200px;
-  font-size: 18px;
-  padding: 10px;
-  border: none;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
-}
-
-#myBtn:hover {
-  background: #ddd;
-  color: black;
-}
-</style>
 </head>
+
 <body>
-
-<video autoplay muted loop id="myVideo">
-  <source src="Videot/kamera.mp4" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
-
-<div class="content">
-  <h1>Heading</h1>
-  <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
-  <button id="myBtn" onclick="myFunction()">Pause</button>
+  
+<div class="parallax1">
+  <h1 class="ylin-h1">Tätä sivupohjaa voisi hyvin käyttää gallerian tai vaikka historia-sivun pohjana</h1>
 </div>
 
-<script>
-var video = document.getElementById("myVideo");
-var btn = document.getElementById("myBtn");
+  <div class="parallax1-osio">
+    <div class="parallax1-teksti">
+      <h2>Vaiherikas historia</h2>
+      <p>Tilan historia kätkee sisäänsä uskomattomia tarinoita muutoksista, luopumisesta,
+        menestyksestä ja kehittymisestä.
+      </p>
+    </div>
 
-function myFunction() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
-  } else {
-    video.pause();
-    btn.innerHTML = "Play";
+    <div class="parallax1-kuva">
+      <img src="Kuvat/kartanon_sali.jpg" alt="Kuva kartanon salista">
+    </div>
+  </div>
+
+
+<div class="parallax2"></div>
+
+  <div class="text-section">
+    <div class="image-content">
+      <img src="Kuvat/kartanon_sali.jpg" alt="Esimerkkikuva">
+    </div>
+    <div class="text-content">
+      <h2>Esimerkkiteksti</h2>
+      <p>
+       Tämä sivu on luotu esimerkiksi mahdollisesta sivumallista.
+       Toinen taustakuva on huonompi, koska se on pienempi ja huonompi resoluutioltaan.
+      </p>
+    </div> 
+  </div>
+
+</body>
+</html>
+
+<style>
+  body, html {
+    height: 100%;
+  }
+  
+  .ylin-h1 {
+  position: relative;
+  z-index: 2;
+  color: white; /* Voit säätää tekstin väriä tarpeen mukaan */
+  text-align: center;
+  line-height: 200px; /* Varmistaa, että teksti on keskitetty pystysuunnassa */
+  }
+
+  .parallax1 {
+    /* The image used */
+    background-image: url('Kuvat/kartano.png');
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .parallax2 {
+    /* The image used */
+    background-image: url('Kuvat/metsänhoito.png');
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .text-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(190, 179, 170); /* Beige tausta */
+  padding: 40px;
+  gap: 10px; /* Väli tekstin ja kuvan välillä */
+  flex-wrap: wrap; /* Varmistaa, että sisältö pinoutuu pienemmillä näytöillä */
+}
+
+.parallax1-osio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(190, 179, 170); /* Beige tausta */
+  padding: 40px;
+  gap: 10px; /* Väli tekstin ja kuvan välillä */
+  flex-wrap: wrap; /* Varmistaa, että sisältö pinoutuu pienemmillä näytöillä */
+}
+
+.text-content {
+  flex: 1; /* Teksti vie tilaa */
+  font-size: 18px;
+  color: #333; /* Tummanharmaa teksti */
+}
+
+.parallax1-teksti {
+  flex: 1; /* Teksti vie tilaa */
+  font-size: 18px;
+  color: #333; /* Tummanharmaa teksti */
+}
+
+.image-content, .parallax1-kuva {
+  flex: 0 0 200px; /* Kuva vie kiinteän tilan */
+  max-width: 200px; /* Maksimileveys kuvalle */
+}
+
+.image-content img, .parallax1-kuva img {
+  width: 100%; /* Kuva täyttää vanhemman elementin */
+  height: auto; /* Säilyttää kuvan mittasuhteet */
+  border-radius: 8px; /* Pyöristää kuvan kulmat */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Lisää varjo kuvan ympärille */
+}
+
+@media (max-width: 768px) {
+  .text-section, .parallax1-osio {
+    flex-direction: column; /* Pinoutuu pystysuunnassa pienemmillä näytöillä */
+    text-align: center; /* Keskittää tekstin */
+  }
+
+  .image-content, .parallax1-kuva {
+    margin-top: 20px; /* Lisää väliä kuvan ja tekstin väliin */
+    max-width: 100%; /* Kuva täyttää koko leveyden pienemmillä näytöillä */
   }
 }
-</script>
+  </style>
+
+
+
 
 
 
