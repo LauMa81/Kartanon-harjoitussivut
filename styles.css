@@ -91,6 +91,7 @@ body {
   height: auto; /* Pitää kuvan mittasuhteet */
   border-radius: 8px; /* Pyöristää kuvan kulmat */
   object-fit: cover; /* Skaalaa kuvan täyttämään alueen */
+  
 }
 
 nav ul {
