@@ -44,8 +44,25 @@ body, html {
   background: url('kuva') no-repeat center center/cover;
 }
 #historia {
-  background: url('Kuvat/kartano.png') no-repeat center center/cover; 
+  background: none; 
 }
+
+body#historia {
+  background: url('Kuvat/kartano.png') no-repeat center center;
+  background-size: cover; /* Skaalaa kuva täyttämään koko näkymän */
+  background-attachment: fixed; /* Kiinnittää taustakuvan paikalleen */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Varmistaa, että taustakuva kattaa vähintään koko näkymän korkeuden */
+  color: #fff; /* Tekstin väri */
+}
+
+@media (min-width: 1920px) {
+  body#historia {
+    background-size: 100% auto; /* Skaalaa kuva vaakasuunnassa */
+  }
+}
+
 #maatalous {
   background: url('Kuvat/viljan_puinti.jpg') no-repeat center center/cover;
 }
@@ -71,6 +88,72 @@ body, html {
 }
 #yhteystiedot {
   background: url('Kuvat/yhteystiedot.jpg') no-repeat center center/cover;
+}
+#historia {
+  background: url('Kuvat/vanha_kartano.jpg') no-repeat center center/cover;
+}
+
+/* Hampurilaisvalikon painike */
+.hamburger {
+  display: none; /* Näytetään vain pienillä näytöillä */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+/* Navigointilista */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* Hampurilaisvalikon toiminta pienillä näytöillä */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Näytetään hampurilaisvalikko pienillä näytöillä */
+  }
+
+  .nav-links {
+    display: none; /* Piilotetaan navigointilista oletuksena */
+    flex-direction: column;
+    background-color: #415263;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.active {
+    display: flex; /* Näytetään navigointilista, kun hampurilaisvalikko on aktiivinen */
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
 }
 
 
@@ -164,6 +247,8 @@ main {
 .content ul li strong {
   color: #2b2b2b;
 }
+
+
 
 .info {
   display: flex;
