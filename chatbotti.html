@@ -1,39 +1,87 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laadukkaan siirtonurmen kasvatusta</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siirtonurmi Chatbot</title>
+  <style>
+    /* Chatbotin perusstyling */
+    #chatbot {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      height: 400px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: none; /* Piilotetaan oletuksena */
+      flex-direction: column;
+    }
+    #chatbot-header {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      position: relative;
+    }
+    #chatbot-header button {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #chatbot-messages {
+      flex-grow: 1;
+      padding: 10px;
+      overflow-y: auto;
+      border-bottom: 1px solid #ccc;
+    }
+    #chatbot-input {
+      display: flex;
+      border-top: 1px solid #ccc;
+    }
+    #chatbot-input input {
+      flex-grow: 1;
+      padding: 10px;
+      border: none;
+      border-bottom-left-radius: 8px;
+    }
+    #chatbot-input button {
+      padding: 10px;
+      border: none;
+      background-color: #4CAF50;
+      color: #fff;
+      border-bottom-right-radius: 8px;
+      cursor: pointer;
+    }
+    #chatbot-input button:hover {
+      background-color: #45a049;
+    }
+    #chatbot-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 <body>
-  
-  <header>
-      <div class="yläpalkki" id="siirtonurmi">
-          <h1>Siirtonurmi</h1>
-          <p>Tähän tulee kuva tai video</p>
-      </div>
-
-      <nav>
-        <ul class="nav-links" id="nav-links">
-              <li><a href="index.html">Etusivu</a></li>
-              <li><a href="historia.html">Historia</a></li>
-              <li><a href="maatalous.html">Maatalous</a></li>
-              <li><a href="metsatalous.html">Metsätalous</a></li>
-              <li><a href="palvelumme.html">Palvelumme</a></li>
-              <li><a href="siirtonurmi.html">Siirtonurmi</a></li>
-              <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
-          </ul>
-      </nav>
-  </header>
-
-  <main>
-
-    Tähän tulee tekstiä siirtonurmesta.
-
-  </main>
-
-
 
     <!-- Chatbotin avauspainike -->
     <button id="chatbot-toggle">💬</button>
@@ -112,6 +160,7 @@
 // Määritellään hakusanat ja niiden vastaukset
 const keywords = [
 
+
 /*yleistä siirtonurmesta*/
 { words: ['kestävyys', 'kestää', 'siirtonurmella'], response: 'Siirtonurmi on oikealla hoidolla ikuinen. Mikäli siirtonurmeen tulee vaurio kohtia, sitä on aina mahdollisuus paikata siirtonurmella tai kylvämällä uutta siementä. ' },
 { words: ['siemeniä', 'siemenistä'], response: 'Siirtonurmi on kasvatettu meille erityisesti räätälöidyistä siemenlajikkeista, eikä samaa voi valitettavasti ostaa mistään. On kuitenkin olemassa hyvin samankaltaisia lajeja, mitkä sopivat hyvin nurmen paikkaukseen. Voit käyttää seoksia, missä niittynurmikkaa sekä puistonataa.'},
@@ -151,12 +200,8 @@ const keywords = [
 
 /*yleiset*/
 { words: ['kiitos'], response: 'Ole hyvä! Kysy lisää, jos tarvitset apua.' },
-{ words: ['mitä kuuluu'], response: 'Kiitos, oikein hyvää! Kuinka voisin auttaa sinua?' },
 ];
 </script>
 
-  <footer class="alapalkki">
-    <p>Yritys x | Osoite </p>
-    <p>© 2025</p>  
-  </footer>
 </body>
+</html>
